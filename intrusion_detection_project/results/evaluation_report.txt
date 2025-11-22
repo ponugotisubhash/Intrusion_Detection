@@ -1,0 +1,116 @@
+================================================================================
+INTRUSION DETECTION MODEL EVALUATION REPORT
+================================================================================
+
+EXECUTIVE SUMMARY
+----------------------------------------
+Best Accuracy: Random Forest (0.9703)
+Best F1-Score: Random Forest (0.8927)
+Fastest Inference: Lightweight CNN (0.00ms)
+
+DETAILED RESULTS
+----------------------------------------
+
+RANDOM FOREST
+-------------
+Type: Traditional ML
+Validation Accuracy: 0.9703
+Validation F1-Score: 0.8927
+Validation AUC-ROC: 0.9415
+Training Time: 3.15s
+Inference Time: 0.12ms
+Memory Usage: 6.45MB
+Test Accuracy: 0.9619
+Test F1-Score: 0.8635
+Test AUC-ROC: 0.9165
+
+GRADIENT BOOSTING
+-----------------
+Type: Traditional ML
+Validation Accuracy: 0.9672
+Validation F1-Score: 0.8852
+Validation AUC-ROC: 0.9276
+Training Time: 37.32s
+Inference Time: 0.01ms
+Memory Usage: 0.00MB
+Test Accuracy: 0.9569
+Test F1-Score: 0.8477
+Test AUC-ROC: 0.9261
+
+LIGHTWEIGHT CNN
+---------------
+Type: Deep Learning
+Validation Accuracy: 0.9172
+Validation F1-Score: 0.7337
+Validation AUC-ROC: 0.9074
+Training Time: 2.02s
+Inference Time: 0.00ms
+Memory Usage: 1.16MB
+Test Accuracy: 0.9294
+Test F1-Score: 0.7621
+Test AUC-ROC: 0.9051
+
+================================================================================
+HARDWARE FEASIBILITY ANALYSIS
+================================================================================
+
+REQUIREMENT COMPLIANCE:
+- Target: >90% Accuracy, ≤10ms Inference, ≤4GB Memory
+
+Random Forest:
+  Accuracy ≥90%: ✓ (97.0%)
+  Speed ≤10ms: ✓ (0.12ms)
+  Memory ≤4GB: ✓ (6.4MB)
+  Overall: PASS
+
+Gradient Boosting:
+  Accuracy ≥90%: ✓ (96.7%)
+  Speed ≤10ms: ✓ (0.01ms)
+  Memory ≤4GB: ✓ (0.0MB)
+  Overall: PASS
+
+Lightweight CNN:
+  Accuracy ≥90%: ✓ (91.7%)
+  Speed ≤10ms: ✓ (0.00ms)
+  Memory ≤4GB: ✓ (1.2MB)
+  Overall: PASS
+
+
+DETAILED CLASSIFICATION REPORTS
+----------------------------------------
+
+RANDOM FOREST
+-------------
+              precision    recall  f1-score   support
+
+      Benign     0.9663    0.9897    0.9778      1360
+      Attack     0.9324    0.8042    0.8635       240
+
+    accuracy                         0.9619      1600
+   macro avg     0.9493    0.8969    0.9207      1600
+weighted avg     0.9612    0.9619    0.9607      1600
+
+
+GRADIENT BOOSTING
+-----------------
+              precision    recall  f1-score   support
+
+      Benign     0.9654    0.9846    0.9749      1360
+      Attack     0.9014    0.8000    0.8477       240
+
+    accuracy                         0.9569      1600
+   macro avg     0.9334    0.8923    0.9113      1600
+weighted avg     0.9558    0.9569    0.9558      1600
+
+
+LIGHTWEIGHT CNN
+---------------
+              precision    recall  f1-score   support
+
+      Benign     0.9568    0.9603    0.9585      1360
+      Attack     0.7702    0.7542    0.7621       240
+
+    accuracy                         0.9294      1600
+   macro avg     0.8635    0.8572    0.8603      1600
+weighted avg     0.9288    0.9294    0.9291      1600
+
